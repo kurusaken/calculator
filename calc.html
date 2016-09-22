@@ -1,0 +1,105 @@
+<style type="text/css">
+	table {
+		background-image:url(robotnik.jpeg);
+		border-spacing: 1px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		padding-top: 28px
+	}
+
+	img { 
+		position: absolute;
+		padding-top: 28em;
+	}
+	
+	body {
+		background-image: url(greenhillzone.jpeg);
+		background-size: 100% 100%;
+		background-repeat: ;
+	}
+	td {
+         
+	}
+	div {
+	   padding-top: 27em;
+	}
+	#animate {
+		position: relative;
+		border: 1px solid green;
+		backgound: yellow;
+		width: 100px;
+		height: 100px;
+	}
+</style>
+<body>
+<div id="animate"><img src="sonic4run.gif" id="image"></div>
+<div>
+<script type="text/javascript">
+	
+
+
+</script>
+<table border="10" align="center">
+<form name="calc">
+<tr>
+<td>
+<input type="text" name="input" id="inputs">
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="button" name="1" value=" 1 " onclick="calc.input.value += '1'">
+<input type="button" name="2" value=" 2 " onclick="calc.input.value += '2'">
+<input type="button" name="3" value=" 3 " onclick="calc.input.value += '3'">
+<input type="button" name="+" value=" + " onclick="calc.input.value += '+'">
+</td>
+</tr>
+<td>
+<input type="button" name="4" value=" 4 " onclick="calc.input.value += '4'">
+<input type="button" name="5" value=" 5 " onclick="calc.input.value += '5'">
+<input type="button" name="6" value=" 6 " onclick="calc.input.value += '6'">
+<input type="button" name="-" value=" - " onclick="calc.input.value += '-'">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" name="7" value=" 7 " onclick="calc.input.value += '7'">
+<input type="button" name="8" value=" 8 " onclick="calc.input.value += '8'">
+<input type="button" name="9" value=" 9 " onclick="calc.input.value += '9'">
+<input type="button" name="/" value=" / " onclick="calc.input.value += '/'">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" name="*" value=" * " onclick="calc.input.value += '*'">
+<input type="button" name="0" value=" 0 " onclick="calc.input.value += '0'">
+<input type="button" name="=" value=" = " onclick="calc.input.value = eval(calc.input.value)">
+<input type="button" name="c" value="   " onclick="calc.input.value = ' '">
+<input type="button" name="average" value="average" onclick="getAverage()">
+<input type="button" name="move" value="move" onclick="moveImage()">
+</td>
+</tr>
+
+</form>
+</table>
+</div>
+</body>
+<script type="text/javascript">
+	function getAverage() {
+		var a = document.getElementById('inputs').value;
+		var nums = a.split("+");
+		var total = 0;
+		var average = 0;
+		for (var i = 0; i < nums.length; i++) {
+			total += Number(nums[i]);
+		}
+		average = total / nums.length;
+		document.getElementById('inputs').value = average;
+	}
+</script>
+<script type="text/javascript">
+	function moveImage() {
+		document.getElementById('image').style.padding-left += 25em;
+	}
+</script>
